@@ -5,12 +5,25 @@
         try {
             embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
 
+            window.addEventListener("onEmbeddedMessagingReady", () => {
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                    "CNPJ": "02.535.864/0001-33",
+                    "CPF": "000.000.212-70",
+                    "EmailLogin": "email-usuario@cliente.com.br",
+                    "Nome": "Nome do Usuário",
+                    "NomeFantasia": "Nome Fantasia da Empresa",
+                    "RazaoSocial": "Razão Social Fantasia da Empresa",
+                    "SessionId": "sessionId",
+                    "Telefone": "(11) 88788-1111"
+                });
+            });
+
             embeddedservice_bootstrap.init(
                 '00DDw000005XbUx',
                 'VR_Gente',
-                'https://grupovr--hml.sandbox.my.site.com/ESWVRGente1729865041616',
+                'https://grupovr--hml.sandbox.my.site.com/ESWVRGente1729865041616&#39;,
                 {
-                    scrt2URL: 'https://grupovr--hml.sandbox.my.salesforce-scrt.com'
+                    scrt2URL: 'https://grupovr--hml.sandbox.my.salesforce-scrt.com&#39;
                 }
             );
         } catch (err) {
@@ -18,7 +31,6 @@
         }
     };
 </script>
-<script type='text/javascript' src='https://grupovr--hml.sandbox.my.site.com/ESWVRGente1729865041616/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+<script type='text/javascript' src='https://grupovr--hml.sandbox.my.site.com/ESWVRGente1729865041616/assets/js/bootstrap.min.js&#39; onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
